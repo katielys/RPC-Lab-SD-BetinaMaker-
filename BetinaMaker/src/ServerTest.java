@@ -12,8 +12,8 @@ import java.net.Socket;
 
 public class ServerTest {
     public static void main(String[] args) throws IOException {
-        int porta= 10 ;
-        ServerSocket serverSocket = new ServerSocket(10);
+        int porta= 3333 ;
+        ServerSocket serverSocket = new ServerSocket(porta);
       
         System.out.println("Server running at port  " + porta );
         while (true) {

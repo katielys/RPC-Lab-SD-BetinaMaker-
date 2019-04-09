@@ -6,7 +6,8 @@ import java.net.*;
 import java.math.*;
 import javax.swing.JOptionPane;
 
-
+import java.util.*;
+import java.nio.ByteBuffer;
 /**
  *
  * @author Katiely
@@ -26,8 +27,8 @@ public class SocketBetinaServer {
         float vf = in.readFloat();
         int year = in.readInt();
         double juros = (Math.pow( (vf/v0) , 1.0/year)-1.0);
-        out.write((int) juros);
-        JOptionPane.showMessageDialog(null,"O taxa é : "+ String.valueOf(juros) );
+        out.writeDouble(juros);
+        //JOptionPane.showMessageDialog(null,"O taxa é : "+ String.valueOf(juros) );
         in.close();
         out.close();
         socket.close();
